@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+    @apply scroll-smooth;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.grid{
+	display: grid;
+}
+
+.grid--1x2 {
+	grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.grid--1x3 {
+	grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.btn {
+	display: inline-block;
+	border: 0;
+	padding: .5em 1.5em;
+	font-size: 1.125rem;
+	font-weight: 700;
+	transition: 250ms;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}
+
+.flow-content--s > * + *  {
+	margin-top: .5rem !important;
+}
+
+.flow-content--m > * + *  {
+	margin-top: 1rem !important;
+}
+.flow-content--xm > * + *  {
+	margin-top: 1.5rem !important;
+}
+.flow-content--l > * + *  {
+	margin-top: 3rem !important;
+}
+.flow-content--xl > * + *  {
+	margin-top: 3.5rem !important;
+}
+
+.special {
+    @apply font-bold text-primary;
+}
+
+.btn--primary{
+    @apply hover:bg-[#47dcff] hover:border-[#47dcff] border border-primary text-white bg-primary rounded-md w-fit;
+}
+
+.cloud-overlay{
+    background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./assets/cloud-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.contact input, textarea{
+	background: rgba(0,0,0,.15);
+	backdrop-filter: blur(4px);
+    font-family: 'Roboto', sans-serif;
+	@apply text-white duration-300 rounded-md;
+}
+
+.contact input:focus, textarea:focus{
+	outline: #0fbbe0;
+	box-shadow: 0  0 12px #0fbbe0;
+}
+
+.contact textarea{
+	resize: vertical;
+	min-height: 270px;
+	max-height: 350px
+}
+
+.contact label{
+	@apply inline-block text-white;
+}
+
+@media screen and (max-width: 34.375em) {
+	html{
+		font-size: 65%;
+	}
+}
