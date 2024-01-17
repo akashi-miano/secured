@@ -7,7 +7,7 @@ const Data = ({ recovery = false }) => {
       <section
         className={
           recovery
-            ? "bg-center bg-no-repeat bg-cover bg-recovery py-32 text-white h-screen"
+            ? "bg-center bg-no-repeat bg-cover bg-recovery py-32 text-white h-screen flex items-center"
             : "py-16 !bg-none"
         }
         id="recovery"
